@@ -74,4 +74,7 @@ html {
 .hour-hand {
     background: red;
     height: 6px;
+    width:40%;
+    top: 55%;
+    left: 10;
 }
