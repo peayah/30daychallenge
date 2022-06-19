@@ -39,7 +39,7 @@
     }
 
     .hand {
-     
+      width: 50%;
       top: 50%;
       position: absolute;
       transform-origin: 100%;
@@ -49,20 +49,16 @@
     }
 
 .sec-hand {
-     width: 50%;
     background: green;
     height: 4px;
 }
 
 .min-hand {
-     width: 47%;
     background: yellow;
     height: 5px;
 }
 
 .hour-hand {
-     width: 45%;
     background: red;
     height: 6px;
-
 }
