@@ -3,12 +3,12 @@
 	<head>
 		  <meta charset="UTF-8">
 		  <title>JavaScript Drum Kit</title>
-		  <link rel="stylesheet" href="https://peayah.github.io/30daychallenge/day1-drumkit/style.css">
+		  <link rel="stylesheet" href="style.css">
 	</head>
 	<body>
 		<!-- Header -->
 		<header id="header">
-			<a href="https://peayah.github.io/30daychallenge/index.html" class="logo"><strong>Home</strong></a>
+			<a href="index.html" class="logo"><strong>Home</strong></a>
 		</header>
 		<div class="keys">
 			<div data-key="83" class="key">
@@ -66,25 +66,6 @@
 	  <audio data-key="75" src="sounds/tom.wav"></audio>
 	  <audio data-key="76" src="sounds/tink.wav"></audio>
 
-	<script>
-		function playSound(e) {
-			const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`);
-			const key = document.querySelector(`.key[data-key="${e.keyCode}"]`);
-			if(!audio) return // stop function if no audio key is hit
-			audio.currentTime=0; // start over
-			audio.play()
-			key.classList.add('playing')
-		}
-	
-		function removeTransition(e) {
-			if (e.propertyName !== "transform") return
-			this.classList.remove('playing');
-		}
-		
-		const keys = document.querySelectorAll(".key");
-		keys.forEach(key => key.addEventListener('transitionend', removeTransition ));	
-		window.addEventListener("keydown", playSound);
-
-	</script>
+	<script src ="main.js"></script>
 	</body>
 </html>
