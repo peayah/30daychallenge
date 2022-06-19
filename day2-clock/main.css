@@ -55,6 +55,7 @@ html {
     }
 
     .hand {
+      background: black;
       width: 50%;
       top: 50%;
       position: absolute;
@@ -70,14 +71,11 @@ html {
 }
 
 .min-hand {
-    background: yellow;
-    height: 5px;
+    height: 6px;
 }
 
 .hour-hand {
-    background: red;
     height: 6px;
-    width:40%;
-    top: 55%;
-    left: 10;
+    width: 35%;
+    left: 15;
 }
