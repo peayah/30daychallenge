@@ -22,8 +22,7 @@ position: fixed;
 }
 
 img {
-  height: 100%;
-  width: 100%;
+
 }
 
 img {
@@ -41,8 +40,8 @@ img {
       background: #193549;
       color: white;
       font-family: 'helvetica neue', sans-serif;
-      font-weight: 100;
-      font-size: 50px;
+      font-weight: 700;
+      font-size: 40px;
     }
 
     .controls {
