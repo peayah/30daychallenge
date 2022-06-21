@@ -16,10 +16,14 @@ position: fixed;
 
 
 :root {
-
   --base: #ffc600;
   --spacing: 10px;
   --blur: 10px;
+}
+
+img {
+  height: 100%;
+  width: 100%;
 }
 
 img {
