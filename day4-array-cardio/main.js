@@ -26,6 +26,11 @@
             'Berne, Eric', 'Berra, Yogi', 'Berry, Wendell', 'Bevan, Aneurin', 'Ben-Gurion, David', 'Bevel, Ken', 'Biden, Joseph', 'Bennington, Chester', 'Bierce, Ambrose',
             'Billings, Josh', 'Birrell, Augustine', 'Blair, Tony', 'Beecher, Henry', 'Biondo, Frank'
         ];
+        // print all
+        const printAll = inventors.filter(inventor =>
+            (inventor.year > 0 ));
+        console.table(printAll)
+
 
         // Array.prototype.filter()
         // 1. Filter the list of inventors for those who were born in the 1500's
@@ -35,22 +40,62 @@
 
         // Array.prototype.map()
         // 2. Give us an array of the inventors first and last names
-
+        const inventorsArray = inventors.map(inventor => `${inventor.first} ${inventor.last}`)
+            console.table(inventorsArray)
         // Array.prototype.sort()
         // 3. Sort the inventors by birthdate, oldest to youngest
+            const birthdaySort = inventors.sort((personOne, personTwo) => personOne.year > personTwo.year ? 1 : -1)
+            console.table(birthdaySort)
+        
+            const passedSortReverse = inventors.sort((personOne, personTwo) => personOne.passed < personTwo.passed ? 1 : -1)
+            console.table(passedSortReverse)
+        
 
-        // Array.prototype.reduce()
+            // Array.prototype.reduce()
         // 4. How many years did all the inventors live all together?
+            const initial = 0;
+            const sumOfYears = inventors.reduce((total, inventor) => {
+                return total + (inventor.passed-inventor.year);
+            }, 0);
 
+            console.log(`The total number of scientist year lived is ${sumOfYears}`)
+        
         // 5. Sort the inventors by years lived
+            const sortByYearsLived =  inventors.sort((inventorOne, inventorTwo) => inventorOne.passed - inventorOne.year > inventorTwo.passed - inventorOne.year ? 1 : -1)
+            console.table(sortByYearsLived)
 
         // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
         // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-
+        
+        // const category = document.querySelector('.mw-category');
+        // const links = Array.from(category.querySelectorAll('a'));
+        // const de = links
+        //         .map(link => link.textContent)
+        //         .filter(streetName => streetName.includes('de'))
+        // de
 
         // 7. sort Exercise
         // Sort the people alphabetically by last name
+        const sortPeople = people.sort(function(firstPerson, lastPerson) {
+            const [firstLastName, firstFirstName] = firstPerson.split(', ');
+            
+            const [lastLastName, lastFirstName] = lastPerson.split(', ');
+
+            return firstLastName > lastLastName ? 1 : -1;
+            
+        })
+        console.table(sortPeople)
 
         // 8. Reduce Exercise
         // Sum up the instances of each of these
         const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck'];
+
+        const transportation = data.reduce(function(obj, item){
+            if(!obj[item]) {
+                obj[item] = 0;
+            }
+            obj[item]++
+            return obj
+        }, {})
+
+        console.log(transportation)
