@@ -19,7 +19,7 @@ let direction = true;
 
 function draw(e) {
     if(!isDrawing) return // funtion will not run when no mouse down
-    console.log(e)
+    // console.log(e)
     //https://mothereffinghsl.com
     ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`
 
