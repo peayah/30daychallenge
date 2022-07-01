@@ -2,31 +2,39 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  margin: 0;
+  padding: 0;
+  background-image: radial-gradient(white 25%, yellow 45%, orange 90%);
+}
+
+h1,
+a {
+  clear: both;
+  width:100%
+}
+
+h1 {text-align: center;}
+
 *,
 *:before,
 *:after {
   box-sizing: inherit;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  background: #7A419B;
-  min-height: 100vh;
-  background-image: radial-gradient(white 25%, yellow 45%, orange 90%);
-  background-size: cover;
-  align-items: center;
-  justify-content: center;
-}
-
 .player {
+    margin: 0;
+      padding: 0;
   max-width: 75%;
   border: 5px solid rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
   position: relative;
   font-size: 0;
   overflow: hidden;
+  display: flex;
+  min-width:60vw;
+  background-size: cover;
+margin-left: 10%;
 }
 
 /* This css is only applied when fullscreen is active. */
