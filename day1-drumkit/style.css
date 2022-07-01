@@ -51,19 +51,3 @@ kbd {
   letter-spacing: .1rem;
   color: #ffc600;
 }
-
-#back-button {
-  background-color: mediumseagreen;
-  padding: 20px;
-  width: 40px;
-  height: 40px;
-  color: white;
-  font-family: sans-serif;
-  font-size: 11px;
-  border-radius: 50px;
-  text-align: center;
-  line-height: 15px;
-  position: fixed;
-  top: 0;
-  left: 0;
-}
